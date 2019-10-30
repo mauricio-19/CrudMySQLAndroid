@@ -1,4 +1,4 @@
-Proyecto demostración a sistemas 21 A
+Proyecto demostración a sistemas 22 B
 
 El proyecto esta realizado con:
 
@@ -8,3 +8,5 @@ El proyecto esta realizado con:
 * Otros.
 
 by. Prof. Gámez.
+
+Edit by. Mauricio Umaña
