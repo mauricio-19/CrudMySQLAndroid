@@ -64,8 +64,8 @@ public class MantenimientoMySQL1 {
     ProductsAdapter adapter;
 
     public void guardar(final Context context, final String codigo, final String descripcion, final String precio){
-        String url = "http://mjgl.com.sv/mysql_crud/guardar.php";
-        //String url = "localhost/democrudsis21a/guardar.php";
+        String url = "http://localhost/demostracioncrud/guardar.php";
+        //String url = "localhost/demostracioncrud/guardar.php";
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -118,7 +118,7 @@ public class MantenimientoMySQL1 {
 
 
     public boolean guardar1(final Context context, final String codigo, final String descripcion, final String precio) {
-        //String url = "http://mjgl.com.sv/mysqlcrud/guardar.php";
+        //String url = "http://localhost/demostracioncrud/guardar.php";
         String url  = Config.urlGuardar;
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -193,7 +193,7 @@ public class MantenimientoMySQL1 {
                 progressDialog.setMessage("Espere por favor, Estamos trabajando en el servidor");
                 progressDialog.show();
 
-                //String url = "http://mjgl.com.sv/mysqlcrud/eliminar.php";
+                //String url = "http://localhost/demostracioncrud/eliminar.php";
                 String url  = Config.urlEliminar;
 
                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -558,7 +558,7 @@ public class MantenimientoMySQL1 {
 
 
     public void createfile(Context context, String codigo, String descripcion, String precio){
-        SharedPreferences preferences = context.getSharedPreferences("profeGamez", MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences("MauricioUmaña", MODE_PRIVATE);
         //OBTENIENDO LA FECHA Y HORA ACTUAL DEL SISTEMA.
         DateFormat formatodate= new SimpleDateFormat("yyyy/MM/dd");
         String date= formatodate.format(new Date());

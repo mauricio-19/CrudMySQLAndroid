@@ -65,7 +65,7 @@ public class MantenimientoMySQL {
 
     public void guardar(final Context context, final String codigo, final String descripcion, final String precio){
         String url = Config.urlGuardar;
-        //String url = "localhost/democrudsis21a/guardar.php";
+        //String url = "localhost/demostracioncrud/guardar.php";
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -117,7 +117,7 @@ public class MantenimientoMySQL {
 
 
     public boolean guardar1(final Context context, final String codigo, final String descripcion, final String precio) {
-        //String url = "http://mjgl.com.sv/mysqlcrud/guardar.php";
+        //String url = "http://localhost/demostracioncrud/guardar.php";
         String url  = Config.urlGuardar;
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -192,7 +192,7 @@ public class MantenimientoMySQL {
                 progressDialog.setMessage("Espere por favor, Estamos trabajando en el servidor");
                 progressDialog.show();
 
-                //String url = "http://mjgl.com.sv/mysqlcrud/eliminar.php";
+                //String url = "http://localhost/demostracioncrud/eliminar.php";
                 String url  = Config.urlEliminar;
 
                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -360,9 +360,9 @@ public class MantenimientoMySQL {
                                 String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
                                 String precio = jsonArray.getJSONObject(0).getString("precio");
 
-                                datos.setCodigo(Integer.parseInt(codigo));
-                                datos.setDescripcion(descripcion);
-                                datos.setPrecio(Double.parseDouble(precio));
+                               datos.setCodigo(Integer.parseInt(codigo));
+                               datos.setDescripcion(descripcion);
+                               datos.setPrecio(Double.parseDouble(precio));
 
                                 Intent intent = new Intent(context, MainActivity.class);
                                 intent.putExtra("senal", "1");
@@ -406,7 +406,7 @@ public class MantenimientoMySQL {
 
     public ArrayList<String> consultarAllArticulos(final Context context){
 
-        final ArrayList productosList = new ArrayList<>();  //ArrayList<String>
+      final ArrayList productosList = new ArrayList<>();  //ArrayList<String>
 
         progressDialog = new ProgressDialog(context);
         progressDialog.setCancelable(false);
@@ -484,36 +484,36 @@ public class MantenimientoMySQL {
                     @SuppressLint("ResourceType")
                     @Override
                     public void onResponse(String response) {
-                        try {
-                            //Creamos un objeto JSONObject para poder acceder a los atributos (campos) del objeto. Esperando que todo
-                            JSONObject respuestaJSON = new JSONObject(response.toString());                 //Creo un JSONObject a partir del StringBuilder pasado a cadena
+                try {
+                    //Creamos un objeto JSONObject para poder acceder a los atributos (campos) del objeto. Esperando que todo
+                    JSONObject respuestaJSON = new JSONObject(response.toString());                 //Creo un JSONObject a partir del StringBuilder pasado a cadena
 
-                            //Accedemos al vector de resultados
-                            String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
-                            String result_msj = respuestaJSON.getString("mensaje");   // estado es el nombre del campo en el JSON
+                    //Accedemos al vector de resultados
+                    String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
+                    String result_msj = respuestaJSON.getString("mensaje");   // estado es el nombre del campo en el JSON
 
-                            if (resultJSON.equals("1")) {
+                    if (resultJSON.equals("1")) {
 
-                                Toast toast = Toast.makeText(context, ""+result_msj, Toast.LENGTH_LONG);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
+                        Toast toast = Toast.makeText(context, ""+result_msj, Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
 
-                            } else if (resultJSON.equals("2")) {
-                                Toast toast = Toast.makeText(context, ""+result_msj, Toast.LENGTH_LONG);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
-                            }
-
-                            progressDialog.dismiss();
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                        progressDialog.dismiss();
-
+                    } else if (resultJSON.equals("2")) {
+                        Toast toast = Toast.makeText(context, ""+result_msj, Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
                     }
-                }, new Response.ErrorListener() {
+
+                    progressDialog.dismiss();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                progressDialog.dismiss();
+
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
@@ -551,7 +551,7 @@ public class MantenimientoMySQL {
 
 
     public void createfile(Context context, String codigo, String descripcion, String precio){
-        SharedPreferences preferences = context.getSharedPreferences("profeGamez", MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences("MauricioUmaña", MODE_PRIVATE);
         //OBTENIENDO LA FECHA Y HORA ACTUAL DEL SISTEMA.
         DateFormat formatodate= new SimpleDateFormat("yyyy/MM/dd");
         String date= formatodate.format(new Date());
