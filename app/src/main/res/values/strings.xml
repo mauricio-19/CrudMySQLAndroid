@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">CrudMySQLAndroid</string>
+    <string name="app_name">CrudMySQL</string>
     <string name="title_activity_main2">Main2Activity</string>
+
 
     <string name="action_settings">Nuevo Registro</string>
     <string name="listarticulos">Lista Spinner</string>

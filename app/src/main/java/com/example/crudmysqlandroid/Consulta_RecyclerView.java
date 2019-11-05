@@ -34,7 +34,7 @@ import java.util.List;
 
 public class Consulta_RecyclerView extends AppCompatActivity {
 
-    //private static final String URL = "http://mjgl.com.sv/mysqlcrud/Api.php";
+    //private static final String URL = "http://localhost/demostracioncrud/Api.php";
     private static final String URL = Config.urlConsultaApiMySQLi;
 
     List<Productos> productosList;

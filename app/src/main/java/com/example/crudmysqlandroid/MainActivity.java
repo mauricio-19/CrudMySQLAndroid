@@ -95,12 +95,12 @@ public class MainActivity extends AppCompatActivity{
 
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 DialogConfirmacion();
             }
         });
-
 
         /******************************************************************/
              //BLOQUE DE CÓDIGO PARA MOSTRAR DATOS DE LA BUSQUEDA//
@@ -304,14 +304,13 @@ public class MainActivity extends AppCompatActivity{
     }
 
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
