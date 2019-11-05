@@ -106,34 +106,39 @@
                 android:textSize="15dp" />
 
             <Button
-                android:id="@+id/btnconsultar1"
+                android:id="@+id/btn_consultaCodigo"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/btn_estilo"
-                android:drawableRight="@drawable/ic_buscar"
-                android:onClick="consultarporcodigo"
-                android:paddingRight="75dp"
-                android:paddingLeft="15dp"
-                android:text="Consulta por código"
-                android:textSize="15dp" />
+                android:layout_marginTop="5dp"
+                android:text="Consultar por código"
+                android:textColor="#0E0D0D"
+                android:background="@drawable/estiloboton"
+                android:shadowColor="#2314A8"
+                android:shadowDx="-3"
+                android:shadowDy="0"
+                android:shadowRadius="8"
+                android:drawableStart="@drawable/ic_search"
+                android:paddingLeft="80dp"
+                android:drawablePadding="-40dp"
+                />
 
             <Button
-                android:id="@+id/btnconsultar2"
+                android:id="@+id/btn_consultaDescripcion"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/btn_estilo"
-                android:drawableRight="@drawable/ic_descri"
-                android:onClick="consultarpordescripcion"
-                android:paddingRight="75dp"
-                android:paddingLeft="15dp"
-                android:text="Consulta por descripción"
-                android:textSize="15dp" />
+                android:layout_marginTop="5dp"
+                android:text="Consultar por descrición"
+                android:textColor="#0A0A0A"
+                android:background="@drawable/estiloboton"
+                android:shadowColor="#2314A8"
+                android:shadowDx="-3"
+                android:shadowDy="0"
+                android:shadowRadius="8"
+                />
 
             <Button
                 android:id="@+id/btneliminar"
