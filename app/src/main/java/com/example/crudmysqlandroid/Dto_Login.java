@@ -1,5 +1,5 @@
 package com.example.crudmysqlandroid;
 
-public class prueba {
+public class Dto_Login {
 
 }
